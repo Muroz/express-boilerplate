@@ -1,7 +1,7 @@
 {
   "name": "express-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express server boilerplate",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +9,11 @@
     "start": "tsc && node dist/index",
     "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Diego Zuluaga <diego@zuluaga.io>",
   "license": "ISC",
   "dependencies": {
     "@types/cors": "^2.8.12",
