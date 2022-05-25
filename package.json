@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/** --fix",
-    "start": "tsc && node dist/index",
-    "prepare": "husky install"
+    "start:dev": "NODE_ENV=development webpack",
+    "serve:dev": "NODE_ENV=development nodemon dist/index.js",
+    "prepare": "husky install",
+    "build": "webpack"
   },
   "keywords": [
     "nodejs",
@@ -29,7 +31,12 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "husky": "^7.0.0",
+    "nodemon": "^2.0.16",
+    "ts-loader": "^9.3.0",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0",
+    "webpack-shell-plugin-next": "^2.2.2"
   }
 }
