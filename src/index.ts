@@ -1,12 +1,17 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import swaggerUi from 'swagger-ui-express';
+
+import swaggerDocument from './openAPI/swagger';
 
 const app = express();
 const port = 3000;
 
 app.use(cors());
 app.use(helmet());
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get('/health', (req, res) => {
   const data = {
